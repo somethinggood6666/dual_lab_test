@@ -39,7 +39,7 @@ public class InputFromFile {
         if (!isBusService(fileData[0])
                 || !isTimeCorrect(fileData[1])
                 || !isTimeCorrect(fileData[2])
-                || (fileData[1].compareTo(fileData[2])) <= 0){
+                || (fileData[1].compareTo(fileData[2])) >= 0){
             try {
                 throw new InvalidDataException("Data has wrong format");
             } catch (InvalidDataException e) {
