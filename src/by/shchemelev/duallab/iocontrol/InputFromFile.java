@@ -25,6 +25,7 @@ public class InputFromFile {
         }
 
         String[] fileData;
+        //fileData consists of 3 fields - service name, departure time, arrival time.
 
         while (scanner.hasNext()){
             fileData = scanner.nextLine().split(" ");

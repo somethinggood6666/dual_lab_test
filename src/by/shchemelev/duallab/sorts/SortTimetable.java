@@ -16,6 +16,8 @@ public class SortTimetable {
                 sortedList.add(listOfBuses.get(i));
             }
         }
+
+        //check the last element separately
         BusService lastElement = listOfBuses.get(listOfBuses.size() - 1);
         if (isTimeLessThanHour(lastElement.getArrivalTime(), lastElement.getDepartureTime())){
             sortedList.add(lastElement);

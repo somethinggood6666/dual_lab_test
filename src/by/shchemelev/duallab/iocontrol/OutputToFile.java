@@ -12,6 +12,7 @@ public class OutputToFile {
     public static void writeDataToFile(List<BusService> serviceList) throws IOException {
         List<BusService> listOfGrottyService = new ArrayList<>();
 
+        //firstly write Posh service buses
         FileWriter fileWriter = new FileWriter("output.txt");
         for (BusService busService: serviceList) {
             if (busService.getBusService() != BusServices.Grotty) {
@@ -21,6 +22,8 @@ public class OutputToFile {
             }
         }
         fileWriter.write("\n");
+
+        //than Grotty service
         for (BusService busService: listOfGrottyService) {
             fileWriter.write(busService + "\n");
         }

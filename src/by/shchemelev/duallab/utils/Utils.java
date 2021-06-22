@@ -8,7 +8,7 @@ public class Utils {
     public static void requireExistingFile(File file) {
         if (!file.exists()){
             try {
-                throw new NoSuchFileException("File " + file.getName() + " doesnt exists");
+                throw new NoSuchFileException("File " + file.getName() + " doesn`t exists");
             } catch (NoSuchFileException e) {
                 e.printStackTrace();
                 System.exit(1);
